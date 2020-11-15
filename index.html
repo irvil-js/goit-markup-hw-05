@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <base href=".">
   </head>
 
   <body>
@@ -55,15 +56,15 @@
       <section class="hero">
         <div class="container hero-view">
           <h1 class="main-title">эффективные решения для вашего бизнеса</h1>
-          <button data-modal-open type="button" class="btn-service">
+          <button type="button" class="btn-service" data-modal-open>
             Заказать услугу
           </button>
-          <div class="backdrop" data-modal>
+          <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <div class="close-btn">
-                <button data-modal-close class="close-icon" aria-label="close">
+                <button class="close-icon" data-modal-close>
                   <svg class="close-icons-svg">
-                    <use href="./icons/sprite.svg#icon-close"></use>
+                    <use href="./icons/symbol-defs.svg#icon-close"></use>
                   </svg>
                 </button>
               </div>
@@ -593,6 +594,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./js/modalWnd.js" type="text/javascript"></script>
   </body>
 </html>
