@@ -865,6 +865,7 @@ h2 {
 
 .backdrop:not(is-hidden) .modal {
   transform: scale(1) translate(-50%, -50%);
+  transform-origin: left top;
   transition: transform var(--timing-function);
 }
 
@@ -882,8 +883,6 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
   width: 528px;
   height: 581px;
   background-color: var(--white-clr);
