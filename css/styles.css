@@ -205,7 +205,7 @@ body {
   background-color: var(--accent-color);
 
   transform: scale(0);
-  transition: transform 250ms var(--timing-function);
+  transition: transform var(--timing-function);
 }
 
 .link-nav:hover::after {
@@ -416,6 +416,7 @@ h2 {
 
   background-color: var(--accent-color);
   color: var(--white-clr);
+  outline: none;
 }
 
 .project {
@@ -859,6 +860,17 @@ h2 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.backdrop:not(is-hidden) .modal {
+  transform: scale(1) translate(-50%, -50%);
+  transition: transform var(--timing-function);
+}
+
+.backdrop.is-hidden .modal {
+  transition: transform 0ms;
+  transform: scale(0) translate(-50%, -50%);
 }
 
 .backdrop.is-hidden {
@@ -886,7 +898,8 @@ h2 {
   width: 30px;
   height: 30px;
   background-color: var(--white-clr);
-  border: 1px solid var(--white-clr);
+  border: none;
+  outline: none;
   border-radius: 50%;
   text-align: center;
 }
@@ -904,5 +917,3 @@ h2 {
   right: 8px;
   top: 8px;
 }
-
-.close-icon::
